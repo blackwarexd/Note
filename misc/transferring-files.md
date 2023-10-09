@@ -16,7 +16,7 @@ layout:
 
 ## Windows
 
-## Impacket-smbserver.py
+### Impacket-smbserver.py
 
 ```bash
 smbserver.py <share> /path/to/file    #attacker machine
