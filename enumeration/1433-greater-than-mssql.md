@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# 1433 -> MSSQL
+# 1433 - MSSQL
 
 ## Nmap Scripts
 

@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# 21 -> FTP
+# 21 - FTP
 
 ## Nmap Scripts
 

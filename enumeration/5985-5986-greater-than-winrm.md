@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# 5985,5986 -> WinRM
+# 5985,5986 - WinRM
 
 ## CrackMapExec
 

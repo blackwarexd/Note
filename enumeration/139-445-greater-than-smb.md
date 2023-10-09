@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# 139,445 -> SMB
+# 139,445 - SMB
 
 ## Nmap Scripts
 

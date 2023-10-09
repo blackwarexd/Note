@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# 22 -> SSH
+# 22 - SSH
 
 ## Netcat
 

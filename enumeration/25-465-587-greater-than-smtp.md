@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# 25,465,587 -> SMTP
+# 25,465,587 - SMTP
 
 ## MSFconsole
 

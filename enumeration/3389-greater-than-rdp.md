@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# 3389 -> RDP
+# 3389 - RDP
 
 ## XfreeRDP
 

@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# 3306 -> MySQL
+# 3306 - MySQL
 
 ## Nmap Scripts
 
