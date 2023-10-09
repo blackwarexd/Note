@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Note](README.md)
+* [zetahub.xyz](README.md)
 
 ## 🔍 enumeration
 
