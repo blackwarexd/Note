@@ -1,11 +1,6 @@
 # Table of contents
 
-* [zetahub.xyz](README.md)
-
-## 🍀 misc
-
-* [Reverse shell upgrade](misc/reverse-shell-upgrade.md)
-* [Transferring files](misc/transferring-files.md)
+* [Note](README.md)
 
 ## 🔍 enumeration
 
@@ -17,3 +12,13 @@
 * [3306 - MySQL](enumeration/3306-greater-than-mysql.md)
 * [3389 - RDP](enumeration/3389-greater-than-rdp.md)
 * [5985,5986 - WinRM](enumeration/5985-5986-greater-than-winrm.md)
+
+## 🍀 misc
+
+* [Reverse shell upgrade](misc/reverse-shell-upgrade.md)
+* [Transferring files](misc/transferring-files.md)
+
+## 🕸 web hacking
+
+* [SQL injection](web-hacking/sql-injection.md)
+* [SSTI (Server Side Template Injection)](web-hacking/ssti-server-side-template-injection.md)
