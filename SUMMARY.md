@@ -2,6 +2,11 @@
 
 * [zetahub.xyz](README.md)
 
+## 🍀 misc
+
+* [Reverse shell upgrade](misc/reverse-shell-upgrade.md)
+* [Transferring files](misc/transferring-files.md)
+
 ## 🔍 enumeration
 
 * [21 - FTP](enumeration/21-greater-than-ftp.md)

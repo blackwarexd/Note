@@ -16,8 +16,6 @@ layout:
 
 ## Nmap Scripts
 
-The example command for enumerating _<mark style="color:green;">Microsoft-SQL</mark>_ (MSSQL) with Nmap is here.
-
 ```bash
 # Enum version/info mssql
 sudo nmap -p1433 --script=ms-sql-info $IP
@@ -45,8 +43,6 @@ sudo nmap -p1433 --script=ms-sql-xp-cmdshell --script-args mssql.username=admin,
 ```
 
 ## MSFconsole
-
-is a framework that holds many exploits, backdoors, scanners, etc. This is also known as _<mark style="color:green;">Metasploit</mark>_, by default, it is installed on Kali Linux.
 
 ```bash
 auxiliary/scanner/mssql/mssql_login

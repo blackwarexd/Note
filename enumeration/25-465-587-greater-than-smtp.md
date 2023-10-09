@@ -16,8 +16,6 @@ layout:
 
 ## MSFconsole
 
-is a framework that holds many exploits, backdoors, scanners, etc. This is also known as _<mark style="color:green;">Metasploit</mark>_, by default, it is installed on Kali Linux.
-
 ```bash
 auxiliary/scanner/smtp/smtp_version
 auxiliary/scanner/smtp/smtp_enum

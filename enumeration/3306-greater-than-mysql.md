@@ -16,8 +16,6 @@ layout:
 
 ## Nmap Scripts
 
-The example command for enumerating _<mark style="color:green;">MySQL</mark>_ with Nmap is here.
-
 ```bash
 # Enum version/info/capabilities/attribute MySQ
 sudo nmap -p3306 --script=mysql-info $IP
@@ -46,8 +44,6 @@ sudo nmap -p3306 --script=mysql-query --script-args "query='select count(*) from
 
 ## MySQL tool
 
-is a command line utility to interact/log into databases in _<mark style="color:green;">MySQL</mark>. Check_ [_this_](https://book.hacktricks.xyz/network-services-pentesting/pentesting-mysql#mysql-commands) _for more commands._
-
 ```bash
 # Login to MySQL (password prompt)
 mysql -h $IP -u root
@@ -61,15 +57,11 @@ mysql -h $IP -u root
 
 ## Hydra
 
-is a brute force tool that is installed in Kali Linux by default. It can brute force the password/user's file list in several protocols.
-
 ```bash
 hydra -l "root" -P /wordlists/passwords.txt $IP mysql
 ```
 
 ## MSFconsole
-
-is a framework that holds many exploits, backdoors, scanners, etc. This is also known as _<mark style="color:green;">Metasploit</mark>_, by default, it is installed on Kali Linux.
 
 ```bash
 auxiliary/scanner/mysql/mysql_version

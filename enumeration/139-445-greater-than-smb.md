@@ -16,8 +16,6 @@ layout:
 
 ## Nmap Scripts
 
-The example command for enumerating _<mark style="color:green;">Server Message Block</mark>_ (SMB) with Nmap is here.
-
 ```bash
 # version/dialect
 sudo nmap -p445 --script=smb-protocols $IP
@@ -52,8 +50,6 @@ sudo nmap -p445 --script=smb-enum-shares --script-args smbusername=administrator
 
 ## Smbmap
 
-is a command line utility made from scripting language (python). Here are some examples of commands for _<mark style="color:green;">enumerate/interact/connect</mark>_ into SMB. It is also _often used for enumerating permissions on shares_.
-
 ```bash
 # Enum with NULL sessions / checking shares permissions
 smbmap -u guest -p "" -d . -H $IP
@@ -79,8 +75,6 @@ smbmap -u "administrator" -p "password123" -H $IP --download 'C$\flag.txt'
 
 ## Smbclient
 
-is a command line utility that came with Linux by default. Here are some examples of commands for listing shares.
-
 ```bash
 # List all shares
 smbclient -L $IP -N
@@ -97,8 +91,6 @@ smbclient \\\\$IP\\<share> -U administrator
 
 ## CrackMapExec
 
-is a powerful tool dubbed as _<mark style="color:green;">swiss army knife</mark>_ for pentesting Windows/Active Directory environments.
-
 ```bash
 # Get Windows version
 crackmapexec smb $IP
@@ -112,8 +104,6 @@ crackmapexec smb $IP -u /worlists/users.txt -p "" -k
 
 ## Rpcclient
 
-is a command line tool initially developed to test _<mark style="color:green;">MS-RPC</mark>_ functionality in Samba itself.
-
 ```bash
 rpcclient -U "" -N $IP                 # null sessions
 rpcclient -U admin%passwd123 $IP       # auth sessions
@@ -126,8 +116,6 @@ rpcclient -U admin%passwd123 $IP       # auth sessions
 ```
 
 ## Enum4Linux
-
-is a command line tool that is installed by default in Kali Linux. It is used for enumerating information from Windows and Samba systems.
 
 ```bash
 # Enum all things
@@ -180,15 +168,11 @@ nmblookup -A $IP
 
 ## Hydra
 
-is a brute force tool that is installed in Kali Linux by default. It can brute force the password/user's file list in several protocols.
-
 ```bash
 hydra -l "admin" -P /wordlists/passwords.txt $IP smb
 ```
 
 ## Impacket-PsExec.py & PsExec.exe
-
-is a lightweight telnet replacement developed by `Microsoft` that _<mark style="color:green;">allows to execute processes</mark>_ on remote Windows systems using any user's credentials. _<mark style="color:green;">Psexec authentication is performed via SMB</mark>_.
 
 ```bash
 # Login with AUTHENTICATION (prompt password)
@@ -200,8 +184,6 @@ impacket-psexec.py example.local/Administrator@$IP -hashes <hash>
 ```
 
 ## MSFconsole
-
-is a framework that holds many exploits, backdoors, scanners, etc. This is also known as _<mark style="color:green;">Metasploit</mark>_, by default, it is installed on Kali Linux.
 
 ```bash
 auxiliary/scanner/smb/smb_version
