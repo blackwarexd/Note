@@ -9,11 +9,14 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: false
+    visible: true
 ---
 
-# 💀 Note
+# Email recon
 
-{% hint style="danger" %}
-This note is a collection of my learning and doing a CTF.
-{% endhint %}
+## TheHarvester
+
+```bash
+# Search emails based on example.com domain
+theHarvester -d example.com -b google,linkedin
+```

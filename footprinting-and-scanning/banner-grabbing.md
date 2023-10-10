@@ -9,11 +9,20 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: false
+    visible: true
 ---
 
-# 💀 Note
+# Banner grabbing
 
-{% hint style="danger" %}
-This note is a collection of my learning and doing a CTF.
-{% endhint %}
+## Nmap
+
+```bash
+# Banner grabbing (NSE)
+nmap -sV -O --script=banner $IP
+```
+
+## Netcat
+
+```bash
+nc -zv $IP $PORT
+```

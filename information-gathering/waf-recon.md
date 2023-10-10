@@ -9,11 +9,14 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: false
+    visible: true
 ---
 
-# 💀 Note
+# WAF recon
 
-{% hint style="danger" %}
-This note is a collection of my learning and doing a CTF.
-{% endhint %}
+## Wafw00f
+
+```bash
+# Check the WAF on the server
+wafw00f example.com
+```

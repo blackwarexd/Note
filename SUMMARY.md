@@ -1,6 +1,21 @@
 # Table of contents
 
-* [Note](README.md)
+* [💀 Note](README.md)
+
+## 📡 information gathering
+
+* [DNS recon](information-gathering/dns-recon.md)
+* [Email recon](information-gathering/email-recon.md)
+* [Subdomain recon](information-gathering/subdomain-recon.md)
+* [Google dorking](information-gathering/google-dorking.md)
+* [WAF recon](information-gathering/waf-recon.md)
+* [Website recon](information-gathering/website-recon.md)
+
+## 🥾 footprinting and scanning
+
+* [Ping sweep](footprinting-and-scanning/ping-sweep.md)
+* [Banner grabbing](footprinting-and-scanning/banner-grabbing.md)
+* [Port scanning](footprinting-and-scanning/port-scanning.md)
 
 ## 🔍 enumeration
 

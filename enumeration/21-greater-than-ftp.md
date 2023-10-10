@@ -24,19 +24,6 @@ nmap -p21 --script=ftp-* $IP
 nmap -p21 --script=ftp-brute --script-agrs userdb=/wordlists/users.txt $IP
 ```
 
-## General Enumeration
-
-```bash
-# View SSL on FTP
-openssl s_client -connect $IP:$PORT -starttls ftp
-
-# View Config file
-cat /etc/vsftpd.conf | grep -v "#"
-
-# List users can't access to FTP
-cat /etc/ftpusers
-```
-
 ## FTP tools (anonymous)
 
 ```bash
@@ -62,4 +49,17 @@ auxiliary/scanner/ftp/ftp_login            # ftp brute-force
 
 # vsftpd v2.3.4
 exploit/unix/ftp/vsftpd_234_backdoor
+```
+
+## General Enumeration
+
+```bash
+# View SSL on FTP
+openssl s_client -connect $IP:$PORT -starttls ftp
+
+# View Config file
+cat /etc/vsftpd.conf | grep -v "#"
+
+# List users can't access to FTP
+cat /etc/ftpusers
 ```

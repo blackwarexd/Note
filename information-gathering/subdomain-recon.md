@@ -9,11 +9,14 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: false
+    visible: true
 ---
 
-# 💀 Note
+# Subdomain recon
 
-{% hint style="danger" %}
-This note is a collection of my learning and doing a CTF.
-{% endhint %}
+## Sublist3r
+
+```bash
+# passive recon
+sublist3r -d example.com
+```
