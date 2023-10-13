@@ -43,7 +43,7 @@ layout:
 # and so on. Until an error occured
 ```
 
-## Union select
+### Union select
 
 ```bash
 # keep replacing 'a'. Until an error occured
@@ -52,7 +52,7 @@ layout:
 ' UNION SELECT NULL,NULL,'a',NULL,NULL--
 ```
 
-## Union all select
+### Union all select
 
 ```bash
 ' UNION ALL SELECT 1-- - 
