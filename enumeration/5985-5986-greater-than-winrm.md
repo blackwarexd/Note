@@ -37,14 +37,9 @@ evil-winrm -S -c pub.key -k decrypted_priv.key -i $IP
 ## MSFconsole
 
 ```bash
-# Checking AUTHENTICATION methods
-auxiliary/scanner/winrm/winrm_auth_methods
-
-# Running cmd with AUTHENTICATION
-auxiliary/scanner/winrm/winrm_cmd
-
-# brute-force
-auxiliary/scanner/winrm/winrm_login
+auxiliary/scanner/winrm/winrm_auth_methods     # Checking AUTHENTICATION methods
+auxiliary/scanner/winrm/winrm_cmd        # Running cmd with AUTHENTICATION
+auxiliary/scanner/winrm/winrm_login      # brute-force
 
 # RCE (get the shell/meterpreter) AUTHENTICATION
 # if you can't run it [BUG]; make sure to (set FORCE_VBS true)

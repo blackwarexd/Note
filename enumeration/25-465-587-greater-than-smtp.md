@@ -17,8 +17,8 @@ layout:
 ## MSFconsole
 
 ```bash
-auxiliary/scanner/smtp/smtp_version
-auxiliary/scanner/smtp/smtp_enum
+auxiliary/scanner/smtp/smtp_version     # smtp enumerate version
+auxiliary/scanner/smtp/smtp_enum        # smtp enumerate users
 
 # SMTP haraka v2.8.9
 exploit/linux/smtp/haraka
