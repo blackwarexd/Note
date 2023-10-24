@@ -9,7 +9,7 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: true
+    visible: false
 ---
 
 # 25,465,587 - SMTP

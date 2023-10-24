@@ -9,7 +9,7 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: true
+    visible: false
 ---
 
 # Port scanning
@@ -18,8 +18,8 @@ layout:
 
 ```bash
 # All Port Scan
-sudo nmap -p- --min-rate=10000 $IP
-sudo nmap -p- --min-rate=10000 -oN nmap/allports $IP --open
+sudo nmap -p- --min-rate=1000 $IP
+sudo nmap -p- --min-rate=1000 -oN nmap/allports $IP --open
 
 # Script Port Scan
 sudo nmap -p$PORT -sCV -oN nmap/output.txt $IP

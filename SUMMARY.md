@@ -2,6 +2,10 @@
 
 * [💀 Note](README.md)
 
+## 💻 active directory
+
+* [Active Directory](active-directory/active-directory.md)
+
 ## 📡 information gathering
 
 * [DNS recon](information-gathering/dns-recon.md)
