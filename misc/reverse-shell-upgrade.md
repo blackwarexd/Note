@@ -27,7 +27,10 @@ export TERM=xterm
 ## Scripts
 
 ```bash
+# It could be used one of them
 script /dev/null -c bash
+script -qc /bin/bash /dev/null
+
 # Ctrl + Z [background]
 stty raw -echo; fg # [Return 2x]
 export TERM=xterm
