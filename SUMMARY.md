@@ -1,6 +1,6 @@
 # Table of contents
 
-* [💀 Note](README.md)
+* [💀 ζεταHUB](README.md)
 
 ## 💻 active directory
 
@@ -37,7 +37,9 @@
 ## 🍀 misc
 
 * [Reverse shell upgrade](misc/reverse-shell-upgrade.md)
-* [Transferring files](misc/transferring-files.md)
+* [File transfers](misc/file-transfers/README.md)
+  * [Windows](misc/file-transfers/windows.md)
+  * [Linux](misc/file-transfers/linux.md)
 
 ## 🕸 web hacking
 
