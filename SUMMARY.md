@@ -1,6 +1,6 @@
 # Table of contents
 
-* [💀 ζεταHUB](README.md)
+* [💀 ζHUB](README.md)
 
 ## 💻 active directory
 
