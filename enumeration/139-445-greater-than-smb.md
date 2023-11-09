@@ -96,7 +96,7 @@ smbclient \\\\$IP\\<share> -U administrator
 crackmapexec smb $IP
 
 # Listing shares/permissions
-crackmapexec smb $IP --shares -u "" -p ""
+crackmapexec smb $IP -u "" -p "" --shares
 
 # RID bruteforce
 crackmapexec smb $IP -u 'anonymous' -p '' --rid-brute
@@ -114,7 +114,7 @@ rpcclient -U admin%passwd123 $IP       # auth sessions
     > netshareenumall           # listing all shares
     > netsharegetinfo <share>   # more info about the share
     
-# Bash onliner RID bruteforce
+# Bash oneliner RID bruteforce
 # get the SID from administrator [> lookupnames administrator]
 for i in $(seq 500 5000); do rpcclient -N -U "" --password=anonymous $IP -c "lookupsids S-1-5-21-4078382237-1492182817-2568127209-$i"; done | grep -v "unknown"
 ```
@@ -176,7 +176,7 @@ nmblookup -A $IP
 hydra -l "admin" -P /wordlists/passwords.txt $IP smb
 ```
 
-## PsExec.py & PsExec.exe
+## PsExec
 
 ```bash
 # Login with AUTHENTICATION (prompt password)
