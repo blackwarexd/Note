@@ -40,6 +40,7 @@
 * [File transfers](misc/file-transfers/README.md)
   * [Windows](misc/file-transfers/windows.md)
   * [Linux](misc/file-transfers/linux.md)
+  * [Code](misc/file-transfers/code.md)
 
 ## 🕸 web hacking
 
