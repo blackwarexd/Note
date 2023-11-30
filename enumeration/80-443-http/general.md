@@ -12,7 +12,7 @@ layout:
     visible: false
 ---
 
-# 80,443 - HTTP
+# General
 
 ## Nmap Scripts
 
@@ -28,12 +28,6 @@ sudo nmap -p80 --script=banner $IP
 
 # Enum HTTP methods
 sudo nmap -p80 --script=http-methods $IP
-
-# Enum webdav supported methods
-sudo nmap -p80 --script=http-methods --script-args http-methods.url-path=/webdav/ $IP
-
-# Enum webdav type
-sudo nmap -p80 --script=http-webdav-scan --script-args http-methods.url-path=/webdav/ $IP
 ```
 
 ## General Enumeration
@@ -91,3 +85,5 @@ auxiliary/scanner/http/files_dir     # files brute-force (like ffuf -recursive)
 exploit/windows/http/rejetto_hfs_exec          # rejetto hfs2.3
 exploit/multi/http/tomcat_jsp_upload_bypass    # Apache
 ```
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>General</td><td></td><td><a href="./">.</a></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
