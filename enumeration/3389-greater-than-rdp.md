@@ -18,7 +18,22 @@ layout:
 
 ```bash
 # Connect with AUTHENTICATION
-xfreerdp /u:Administrator /p:password123 /v:$IP:$PORT
+xfreerdp /u:Administrator /p:password123 /v:$IP:$PORT /cert:ignore
+
+# Connect with AUTHENTICATION (mount Linux folder for file transfer)
+# connect to \\tsclient\ for accessing the directory
+xfreerdp /u:Administrator /p:password123 /v:$IP:$PORT /cert:ignore /drive:linux,/tmp
+```
+
+## Rdesktop
+
+```bash
+# Connect with AUTHENTICATION
+rdesktop $IP -d local -u Administrator -p 'password123'
+
+# Connect with AUTHENTICATION (mount Linux folder for file transfer)
+# connect to \\tsclient\ for accessing the directory
+rdesktop $IP -d local -u Administrator -p 'password123' -r disk:linux='/tmp'
 ```
 
 ## Hydra

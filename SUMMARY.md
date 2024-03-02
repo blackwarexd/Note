@@ -44,7 +44,7 @@
   * [Linux](misc/file-transfers/linux.md)
   * [Code](misc/file-transfers/code.md)
 
-## 🕸 web hacking
+## 🕸️ web hacking
 
 * [SQL injection](web-hacking/sql-injection.md)
 * [SSTI (Server Side Template Injection)](web-hacking/ssti-server-side-template-injection.md)

