@@ -14,13 +14,6 @@ layout:
 
 # 22 - SSH
 
-## Netcat
-
-```bash
-# Banner grabbing
-nc $IP 22
-```
-
 ## Nmap Scripts
 
 ```bash
@@ -35,6 +28,12 @@ sudo nmap -p22 --script=ssh-hostkey --script-ags ssh_hostkey=full $IP
 
 # Bruteforcing
 sudo nmap -p22 --script=ssh-brute --script-args userdb=/wordlists/users.txt $IP
+```
+
+## Banner Grabbing
+
+```bash
+nc -nv $IP 22
 ```
 
 ## Hydra

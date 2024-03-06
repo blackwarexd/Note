@@ -44,7 +44,7 @@ http $IP
 whatweb $IP
 ```
 
-## Pages Enumeration
+## Directory Enumeration
 
 ```bash
 # gobuster command

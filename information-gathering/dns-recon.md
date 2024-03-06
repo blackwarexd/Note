@@ -14,13 +14,6 @@ layout:
 
 # DNS recon
 
-## Dnsrecon
-
-```bash
-# Enumerate general DNS records for a given domain such as MX,SOA,NS,A, etc
-dnsrecon -d example.com
-```
-
 ## Dnsdumpster
 
 * [https://dnsdumpster.com/](https://dnsdumpster.com/)

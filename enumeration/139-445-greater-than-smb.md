@@ -97,26 +97,58 @@ crackmapexec smb $IP
 
 # Listing shares/permissions
 crackmapexec smb $IP -u "" -p "" --shares
-
-# RID bruteforce
-crackmapexec smb $IP -u 'anonymous' -p '' --rid-brute
 ```
 
 ## Rpcclient
 
 ```bash
-rpcclient -U "" -N $IP                 # null sessions
-rpcclient -U admin%passwd123 $IP       # auth sessions
+rpcclient -U "" -N $IP                           # null sessions
+rpcclient -U administrator%password123 $IP       # auth sessions
     > srvinfo                   # enum os version
     > enumdomusers              # enum all users
     > lookupnames admin         # enum user 
     > enumdomgroups             # enum groups
     > netshareenumall           # listing all shares
     > netsharegetinfo <share>   # more info about the share
-    
+```
+
+## Brute-Force RIDs
+
+```bash
 # Bash oneliner RID bruteforce
-# get the SID from administrator [> lookupnames administrator]
+# get the SID from administrator (rpcclient)[> lookupnames administrator]
 for i in $(seq 500 5000); do rpcclient -N -U "" --password=anonymous $IP -c "lookupsids S-1-5-21-4078382237-1492182817-2568127209-$i"; done | grep -v "unknown"
+
+# Crackmapexec RID bruteforce
+crackmapexec smb $IP -u 'anonymous' -p '' --rid-brute
+```
+
+## Enum4Linux-NG
+
+```bash
+# Enum all things
+enum4linux-ng -A $IP
+
+# Enum os information
+enum4linux-ng -O $IP
+
+# Enum users
+enum4linux-ng -U $IP
+
+# Enum shares 
+enum4linux-ng -S $IP
+
+# Enum groups
+enum4linux-ng -G $IP
+
+# Cheking the printer presents
+enum4linux-ng -I $IP
+
+# Enum all things with AUTHENTICATION
+enum4linux-ng -A -u "administrator" -p "password123" $IP
+
+# Enum users SID with AUTHENTICATION
+enum4linux -r default -u "administrator" -p "password123" $IP
 ```
 
 ## Enum4Linux
@@ -173,7 +205,7 @@ nmblookup -A $IP
 ## Hydra
 
 ```bash
-hydra -l "admin" -P /wordlists/passwords.txt $IP smb
+hydra -l "administrator" -P /wordlists/passwords.txt $IP smb
 ```
 
 ## PsExec

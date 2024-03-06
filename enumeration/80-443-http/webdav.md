@@ -32,8 +32,8 @@ davtest -url http://$IP/webdav
 davtest -url http://$IP
 
 # With authentication
-davtest -auth admin:password123 -url http://$IP/webdav
-davtest -auth admin:password123 -url http://$IP
+davtest -auth administrator:password123 -url http://$IP/webdav
+davtest -auth administrator:password123 -url http://$IP
 ```
 
 ## CaDAVer

@@ -24,5 +24,5 @@ nmap -sV -O --script=banner $IP
 ## Netcat
 
 ```bash
-nc -zv $IP $PORT
+nc -nv $IP $PORT
 ```

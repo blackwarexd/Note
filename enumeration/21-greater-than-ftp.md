@@ -24,12 +24,35 @@ nmap -p21 --script=ftp-* $IP
 nmap -p21 --script=ftp-brute --script-agrs userdb=/wordlists/users.txt $IP
 ```
 
-## FTP tools (anonymous)
+## Banner Grabbing
+
+```bash
+nc -nv $IP 21
+openssl s_client -connect $IP:21 -starttls ftp
+```
+
+## FTP tools
 
 ```bash
 ftp $IP
-# prompt user: anonymous
-# prompt password: anonymous or NULL
+>anonymous        # Username
+>anonymous        # Password
+> status          # Show current status
+> ls -a           # List hidden files
+> ls -R           # Recursively listing files
+> get file.txt    # Download a file (file.txt)
+> put file.txt    # Upload a file (file.txt)
+> exit            # Exit 
+```
+
+## Download all files
+
+```bash
+# Download recursively
+wget -m ftp://'anonymous:anonymous'@$IP
+
+# Download recursively
+wget -m --no-passive ftp://'anonymous:anonymous'@$IP
 ```
 
 ## Hydra
